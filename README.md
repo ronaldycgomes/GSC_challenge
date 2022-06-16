@@ -88,7 +88,7 @@ First, I would like to thank you all for the opportunity to show my skills in th
 
 About the QUESTION:
 
-Honestly, I give my best until the last moment to understand and build a logic to achieve these dates, but I had a big difficult to work with this dates diffennce(the API returns only working dates, and you requested period of calendar dates). 
+Honestly, I give my best until the last moment to understand and build a logic to achieve these dates, but I had a big difficult to work with this dates diffence(the API returns only working dates, and you requested period of calendar dates). 
 
 But, analysing the API response based in the date interval that you purpose, clearly we have bigger rates between 02-2002 and 03-2004. And when we have bigger rates, logically, we could have bigger profits in this period.
 
