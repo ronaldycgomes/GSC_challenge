@@ -56,7 +56,10 @@ First, I would like to thank you all for the opportunity to show my skills in th
 
 Here, is the logic for the user's choice for frequency. If he chooses 'day', the code just output the day dataframe that we just had created. Here, note that I deleted the rate value column in the command 'del df['valor']'. And if the user chooses the frequency 'month' or 'year', the code will execute another code block, that I will explain in the next steps.
 
+- ![image](https://user-images.githubusercontent.com/64624525/174092149-c588d266-5887-4e27-9d19-19f4b072592d.png)
 
+- In this piece of code I start to develop the 'month' case logic. In resume, I will use the 'day' case solution to generate the main dataframe. Based on this dataframe, I will develop the logic to get the 'monthly' dataframe. The general idea is to store(in lists) all the lines that are the last day in the month that has SELIC rate in that day, with their respective accrued capital and accrued rates in that line. 
+- About the code: First I create all the lists that I will use to store these lines, and after all the logic, they will build the new 'monthly dataframe', that will be the 'monthly case' output. After this, we can see the firts IF statement that build the logic in the case I delete the first row. 
 
 
 
