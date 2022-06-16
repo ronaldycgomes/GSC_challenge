@@ -40,7 +40,7 @@ First, I would like to thank you all for the opportunity to show my skills in th
 
 = Here, I develop the logic that builds and calculates the 'capital' column. I decided to store all the values in a list, and after the calculations, I incorporate this list as a column in the dataframe. It is important to note that I also store the rates(from the BCB API) in another list to make the calculations easier(because of the indexes). The logic to calculates the accrued rates is basically uses the neutral element of multiplication(1) to multiply the rate(i) * rate(i+1) through the iterations. The formula is:
 
-![image](https://user-images.githubusercontent.com/64624525/174000668-ac40b263-c907-4656-bd59-f33b449cc678.png)
+![image](https://user-images.githubusercontent.com/64624525/174001448-0a6952a8-968f-4b15-bf52-66dd01691974.png)
 
 - About the code: First I use a for loop(the first one) to go through the dataframe. Inside this loop, I use an IF statement in case we are talking about the first row(in this case, the acrrued rate == 0, and the capital = 'capital' variable). In the ELSE statement I calculate the acrrued rate and store in list. It is important to note that I need to cast the rate to FLOAT type to do all the calculations. In the second for loop I calculte the CAPITAL value using the accrued rates, just multipling them, and store in the capital_column list.
 
