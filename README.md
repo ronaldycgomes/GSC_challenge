@@ -52,3 +52,15 @@ First, I would like to thank you all for the opportunity to show my skills in th
 
 - Here, in the first part I just add the 'amount earned' list as a dataframe column, and in the second part, I convert all the 'date' column in to DATETIME values.
 
+![image](https://user-images.githubusercontent.com/64624525/174083149-515d2f6b-4703-4ef3-86cd-163f28031eed.png)
+
+Here, is the logic for the user's choice for frequency. If he chooses 'day', the code just output the day dataframe that we just had created. Here, note that I deleted the rate value column in the command 'del df['valor']'. And if the user chooses the frequency 'month' or 'year', the code will execute another code block, that I will explain in the next steps.
+
+
+
+
+
+
+
+
+
