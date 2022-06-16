@@ -27,7 +27,7 @@ First, I would like to thank you all for the opportunity to show my skills in th
 
 ![image](https://user-images.githubusercontent.com/64624525/173992708-ca7a20d2-9496-419b-8666-5e87628ea2a7.png)
 
-- Here, I started to develop the 'day' case solution. First, I store the BCB API URL, and build a logic(using the string .REPLACE method) to insert the 'start date' and 'end date' inside the URL, creating a new one called 'final_url'. After this, I create a DataFrame(using pandas library) and store all the API response in this dataframe(using the read_json method).
+- Here, I started to develop the 'day' case solution. First, I stored the BCB API URL, and build a logic(using the string .REPLACE method) to insert the 'start date' and 'end date' inside the URL, creating a new one called 'final_url'. After this, I create a DataFrame(using pandas library) and store all the API response in this dataframe(using the read_json method).
 - Obs: I decided to start with the 'day' case because all my solution is based on this case. I mean, the 'month' and 'year' cases will uses the same logic, but with particular changes.
 
 ![image](https://user-images.githubusercontent.com/64624525/174000023-2036cc04-df50-4e12-944d-e725ba54bd8a.png)
