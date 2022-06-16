@@ -38,7 +38,7 @@ First, I would like to thank you all for the opportunity to show my skills in th
 
 ![image](https://user-images.githubusercontent.com/64624525/174000137-e4294d65-d2b1-48d2-8d13-b07d92fd88db.png)
 
-= Here, I develop the logic that builds and calculates the 'capital' column. I decided to store all the values in a list, and after the calculations, I incorporate this list as a column in the dataframe. It is important to note that I also store the rates(from the BCB API) in another list to make the calculations easier(because of the indexes). The logic to calculates the accrued rates is basically uses the neutral element of multiplication(1) to multiply the rate(i) * rate(i+1) through the iterations. The formula is:
+- Here, I develop the logic that builds and calculates the 'capital' column. I decided to store all the values in a list, and after the calculations, I incorporate this list as a column in the dataframe. It is important to note that I also store the rates(from the BCB API) in another list to make the calculations easier(because of the indexes). The logic to calculates the accrued rates is basically uses the neutral element of multiplication(1) to multiply the rate(i) * rate(i+1) through the iterations. The formula is:
 
 ![image](https://user-images.githubusercontent.com/64624525/174001448-0a6952a8-968f-4b15-bf52-66dd01691974.png)
 
@@ -54,15 +54,37 @@ First, I would like to thank you all for the opportunity to show my skills in th
 
 ![image](https://user-images.githubusercontent.com/64624525/174083149-515d2f6b-4703-4ef3-86cd-163f28031eed.png)
 
-Here, is the logic for the user's choice for frequency. If he chooses 'day', the code just output the day dataframe that we just had created. Here, note that I deleted the rate value column in the command 'del df['valor']'. And if the user chooses the frequency 'month' or 'year', the code will execute another code block, that I will explain in the next steps.
+- Here, is the logic for the user's choice for frequency. If he chooses 'day', the code just output the day dataframe that we just had created. Here, note that I deleted the rate value column in the command 'del df['valor']'. And if the user chooses the frequency 'month' or 'year', the code will execute another code block, that I will explain in the next steps.
 
 - ![image](https://user-images.githubusercontent.com/64624525/174092149-c588d266-5887-4e27-9d19-19f4b072592d.png)
 
 - In this piece of code I start to develop the 'month' case logic. In resume, I will use the 'day' case solution to generate the main dataframe. Based on this dataframe, I will develop the logic to get the 'monthly' dataframe. The general idea is to store(in lists) all the lines that are the last day in the month that has SELIC rate in that day, with their respective accrued capital and accrued rates in that line. 
-- About the code: First I create all the lists that I will use to store these lines, and after all the logic, they will build the new 'monthly dataframe', that will be the 'monthly case' output. After this, we can see the firts IF statement that build the logic in the case I delete the first row. 
+- About the code: First I create all the lists that I will use to store these lines, and after all the logic, they will build the new 'monthly dataframe', and that will be the 'monthly case' output. After this, we can see the firts IF statement that build the logic in the case I delete the first row. Inside this first IF statement, we have the logic for the last line case. In short, if we are in the last line in the dataframe, we can not use the usual iteration. Like you see, in line 93 and 94, there is a logic to compare the actual month to the next month(the month of the next day), and if we are in the last dataframe line, we can use df[data[i+1]] (that would cause an index error). So, because of that, we just fill the last line with the end date, its capital and amount earned values from the main dataframe.
+
+![image](https://user-images.githubusercontent.com/64624525/174106430-d84adbc0-e974-40c4-8fd7-0af39d6090b1.png)
+
+- In this piece of code, first I create a new dataframe, and that will be the output for the 'month' case. After this, I incorporate the lists with all the information we got with the logic I explained before, as columns in this new dataframe. Then, I just display the output.
+
+![image](https://user-images.githubusercontent.com/64624525/174108450-9c209474-3921-4608-8445-f261455fa27c.png)
+
+- Here, in this ELSE statement, I use the same logic, but with different indexation(in the case I don't delete the first row).
+- Obs: In the lines 91, 98, 110 and 117 I had to use ILOC method because I can't refer 'amount earned' as column name in the normal referenciation I used in the other cases(line 108 and 109, for example). Why? Because of the blank space in the string.
+
+![image](https://user-images.githubusercontent.com/64624525/174111901-f55ea9a1-d5f5-4c00-a1fc-a2306d1db964.png)
+
+- Here, I basically used the same logic used in the 'month' case, but changed the method that catch the month from a specific day, to a method that catch the year of a specific day. After that, I did the same comparation in proceed with the same logic. In the end, as the last case, I create a new dataframe to use as output.
+ 
+ ![image](https://user-images.githubusercontent.com/64624525/174115928-ba46a15a-64c8-41f9-acba-86e3a2146ebb.png)
+
+- As I explained in the last step, I used the same logic that I apply in the 'month' case, but just changing the .MONTH method to .YEAR method.
 
 
 
+- In general lines, the code works for all scenarios I tested: <br/>
+-Start date and End date as weekdays; <br/>
+-Start date as weekday and End date as weekend; <br/>
+-Start date as weekend and End date as weekday; <br/>
+-Start date and End date as weekend.
 
 
 
