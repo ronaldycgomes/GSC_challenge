@@ -3,7 +3,7 @@ import json
 import requests as requests
 import pandas as pd
 
-#inputs and warings to user.
+#inputs and warnings to user.
 print('Please, input the dates in brazilian format: %dd/%mm/%yy')
 print('Please, input the start date.', end= '\n\n')
 start_date = str(input())
