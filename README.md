@@ -86,6 +86,13 @@ First, I would like to thank you all for the opportunity to show my skills in th
 -Start date as weekend and End date as weekday; <br/>
 -Start date and End date as weekend.
 
+About the QUESTION:
+
+Honestly, I give my best until the last moment to understand and build a logic to achieve these dates, but I had a big difficult to work with this dates diffennce(the API returns only working dates, and you requested period of calendar dates). 
+
+But, analysing the API response based in the date interval that you purpose, clearly we have bigger rates between 02-2002 and 03-2004. And when we have bigger rates, logically, we could have bigger profits in this period.
+
+If it could be possible, I really like to understand how I can achive the exactly period that you request.
 
 
 
