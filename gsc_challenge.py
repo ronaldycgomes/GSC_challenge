@@ -3,7 +3,7 @@ import json
 import requests as requests
 import pandas as pd
 
-#inputs and warings to user.
+#inputs and warnings to user.
 print('Please, input the dates in brazilian format: %dd/%mm/%yy')
 print('Please, input the start date.', end= '\n\n')
 start_date = str(input())
@@ -13,7 +13,6 @@ print('Please input the capital value.', end= '\n\n')
 capital = float(input())
 print('Please input the frequency: "day", "month", or "year".', end= '\n\n')
 frequency = str(input())
-
 
 ###case day.
 #logic to put the 'start_date' and 'end_date' in the URL.
@@ -97,6 +96,12 @@ elif(frequency == 'month'):
                     monthly_capital.insert(i, df.capital[i])
                     monthly_amount_earned.insert(i, df.loc[i].at['amount earned'])
                     
+        #creating the monthly df and displaying it.            
+        monthly_df = pd.DataFrame(dates, columns = ['data'])
+        monthly_df['capital'] = monthly_capital
+        monthly_df['amount earned'] = monthly_amount_earned    
+        display(monthly_df)
+                    
     else:
         for i in range(0, total_days):
             if(i == (total_days-1)):
@@ -111,11 +116,11 @@ elif(frequency == 'month'):
                     monthly_capital.insert(i, df.capital[i])
                     monthly_amount_earned.insert(i, df.loc[i].at['amount earned'])
                     
-    #creating the monthly df and displaying it.            
-    monthly_df = pd.DataFrame(dates, columns = ['data'])
-    monthly_df['capital'] = monthly_capital
-    monthly_df['amount earned'] = monthly_amount_earned    
-    display(monthly_df)
+        #creating the monthly df and displaying it.            
+        monthly_df = pd.DataFrame(dates, columns = ['data'])
+        monthly_df['capital'] = monthly_capital
+        monthly_df['amount earned'] = monthly_amount_earned    
+        display(monthly_df)
         
         
 elif(frequency == 'year'):
@@ -140,6 +145,12 @@ elif(frequency == 'year'):
                     yearly_capital.insert(i, df.capital[i])
                     yearly_amount_earned.insert(i, df.loc[i].at['amount earned'])
                     
+        #creating the yearly df and displaying it.            
+        yearly_df = pd.DataFrame(dates, columns = ['data'])
+        yearly_df['capital'] = yearly_capital
+        yearly_df['amount earned'] = yearly_amount_earned    
+        display(yearly_df)
+                    
     else:
         for i in range(0, total_days):
             if(i == (total_days-1)):
@@ -154,8 +165,8 @@ elif(frequency == 'year'):
                     yearly_capital.insert(i, df.capital[i])
                     yearly_amount_earned.insert(i, df.loc[i].at['amount earned'])
        
-    #creating the yearly df and displaying it.            
-    yearly_df = pd.DataFrame(dates, columns = ['data'])
-    yearly_df['capital'] = yearly_capital
-    yearly_df['amount earned'] = yearly_amount_earned    
-    display(yearly_df)
+        #creating the yearly df and displaying it.            
+        yearly_df = pd.DataFrame(dates, columns = ['data'])
+        yearly_df['capital'] = yearly_capital
+        yearly_df['amount earned'] = yearly_amount_earned    
+        display(yearly_df)
