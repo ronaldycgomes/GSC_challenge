@@ -90,7 +90,7 @@ About the QUESTION:
 
 Honestly, I give my best until the last moment to understand and build a logic to achieve these dates, but I had a big difficult to work with this dates diffence(the API returns only working dates, and you requested period of calendar dates). 
 
-But, analysing the API response based in the date interval that you purpose, clearly we have bigger rates between 02-2002 and 03-2004. And when we have bigger rates, logically, we could have bigger profits in this period.
+But, analysing the API response based in the date interval that you purpose, clearly we have bigger rates in a constraint period between 07-2002 and 11-2003. When we talk about compound rate, time and constancy are the key. And in this interval, the rates are big(not the biggest in the 2000-2022) and they have a good constancy between 0,06 e 0,09. So, if I could guess, it would be between 2002 and 2003.
 
 If it could be possible, I really like to understand how I can achive the exactly period that you request.
 
