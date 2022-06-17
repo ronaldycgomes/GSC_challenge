@@ -73,7 +73,8 @@ if(frequency == 'day'):
     #Outputing the result.
     del df['valor']
     display(df)
-      
+
+###case month.
 elif(frequency == 'month'):
     
     #getting the lists for the "month" df in order to create a df from lists.
@@ -122,7 +123,7 @@ elif(frequency == 'month'):
         monthly_df['amount earned'] = monthly_amount_earned    
         display(monthly_df)
         
-        
+###case year.       
 elif(frequency == 'year'):
 
     #getting the lists for the "yearly" df.
